@@ -1,0 +1,35 @@
+/* ================ CURSOR ================ */
+
+.cursorContainer, .cursorDotContainer
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    pointer-events: none
+    z-index: 9999999 !important
+
+.cursorDotContainer
+    z-index: 9999999999 !important
+
+.cursor
+    background: rgba(81, 194, 255, 0)
+    box-shadow: 0 0 10px rgba(0, 140, 255, 0.531), inset 0 0 8px rgba(0, 166, 255, 0.243)
+    user-select: none
+    border-radius: 50%
+    border: 0.1rem solid rgb(0, 128, 255)
+    backdrop-filter: blur(1px)
+    transition: all 0.2s ease-out
+    z-index: 999999999999999999999999999999 !important
+    pointer-events: none
+
+    &Dot
+        width: 6px
+        transition: all 0s linear
+        height: 6px
+        user-select: none
+        border-radius: 50%
+        z-index: 9999999999999999999999999999999999 !important
+        pointer-events: none
+

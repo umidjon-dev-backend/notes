@@ -1,0 +1,200 @@
+.dashboardCards
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+
+    .dashboardCardContainer
+        display: grid
+        align-items: center
+        justify-items: center
+        padding: 1rem
+
+        .dashboardCard
+            width: 100%
+            display: grid
+            grid-auto-columns: 1fr
+            gap: 2rem
+            padding: 2rem
+            border-radius: 2rem
+            transition: all 0.3s ease-in-out
+            pointer-events: none
+            animation: dc 1s ease
+            backdrop-filter: blur(10px)
+
+            .dashboardItem
+                font-size: 1.5rem
+                text-transform: uppercase
+                background: linear-gradient(270deg, #ffffff, #000000, #008cff, #00618af4)
+                background-size: 400% 400%
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                animation: dt 6s ease infinite
+
+            .dashboardCardNum
+                font-size: 2.5rem
+                font-weight: bold
+
+@keyframes dc
+    0%
+        transform: translate(0, -5rem) scale(0.5)
+    50%
+        transform: translate(0, 0) scale(1.2)
+    100%
+        transform: translate(0, 0) scale(1)
+
+@keyframes dt
+    0%
+        background-position: 0% 50%
+
+    50%
+        background-position: 100% 50%
+
+    100%
+        background-position: 0% 50%
+
+.todoContainer
+    animation: todoC 1s ease
+    overflow: scroll
+    margin-top: 2rem
+    display: grid
+    gap: 2rem
+    padding: 1.4rem
+    grid-template-columns: 1fr
+    border-radius: 2rem
+    backdrop-filter: blur(10px)
+
+    .todoForm
+        display: grid
+        gap: 1rem
+        grid-template-columns: 9fr 1fr
+
+        .todoInput
+            padding: 1rem
+            border-radius: 1rem
+            border: 1px solid #6363632d
+            outline: none
+            font-size: 1.5rem
+            font-weight: bold
+            background: transparent
+            transition: all 0.3s ease-in-out
+
+.todoList
+    display: grid
+    gap: 1rem
+    grid-template-columns: 1fr
+    list-style: none
+    animation: todo 1s ease
+
+    .todoItem
+        animation: todoI 1s ease
+        display: grid
+        gap: 1rem
+        align-items: center
+        grid-template-columns: 9fr 1fr
+        padding: 1rem 2rem
+        border-bottom: 1px solid #6363633d
+
+    .checkName
+        position: relative
+        width: 90%
+        display: grid
+        align-items: center
+        gap: 1rem
+        grid-template-columns: 9fr 1fr
+
+        .todoText
+            display: block
+            font-size: 1.5rem
+            font-weight: bold
+            position: relative
+            left: 4rem
+            transition: all 0.3s ease-in-out
+            text-decoration: none
+            text-transform: capitalize
+            text-align: left
+            margin-left: 1rem
+            margin-right: 1rem
+            user-select: none
+
+        .customCheckbox
+            position: absolute
+            top: 0
+            left: 0
+            width: 2.4rem
+            height: 2.4rem
+            background: #ffffff4e
+            border-radius: 0.8rem
+
+            &::after
+                left: 0.8rem
+                top: 0.4rem
+                width: 0.5rem
+                height: 1rem
+                border: solid #ffffffbe
+                border-width: 0 3px 3px 0
+                transform: rotate(45deg)
+                content: ''
+                position: absolute
+                display: none
+
+.checkName
+    input
+        &:checked
+            ~ .customCheckbox
+                background: #04ff004d
+                &::after
+                    display: block
+
+.todoCheckbox
+    position: absolute
+    opacity: 0
+
+.deleteTodoButtonContainer
+    display: grid
+    align-items: center
+    justify-items: center
+    border: none
+    background: none
+    width: 100%
+    height: 100%
+    padding: 0.6rem
+    user-select: none
+
+    .deleteTodoButton
+        border: none
+        transition: all 0.3s ease
+        pointer-events: none
+        background: none
+        user-select: none
+
+.todoButtonContainer
+    border: none
+    background: none
+    user-select: none
+
+    .todoButton
+        pointer-events: none
+        border: none
+        background: none
+        transition: all 0.3s ease
+        font-size: 2rem
+        user-select: none
+
+@keyframes todoC
+    0%
+        transform: scale(0)
+
+    50%
+        transform: scale(1.2)
+
+@keyframes todo
+    0%
+        transform: skew(100deg)
+
+@keyframes todoI
+    0%
+        transform: scale(0)
+
+    50%
+        transform: scale(0.2)
+
+

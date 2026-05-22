@@ -1,0 +1,29 @@
+* {
+    cursor: none !important;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 10px;
+}
+
+div, main, section, header, p, h1, nav {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 6px;
+    }
+}

@@ -1,0 +1,100 @@
+.eslatmaForm
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 1rem
+    padding: 1.6rem
+    backdrop-filter: blur(10px)
+    border-radius: 2rem
+    transition: all 0.3s ease
+    margin-bottom: 2rem
+    animation: eFanimate 1s ease
+
+    .eslatmaInput
+        background: none
+        font-size: 3rem
+        border: none
+        outline: none
+        padding: 1rem
+
+    .eslatmaDescr
+        background: none
+        font-size: 2rem
+        border: none
+        outline: none
+        padding: 1rem
+        resize: none
+        height: 8rem
+
+    .eslatmaButtonContainer
+        border: none
+        width: 18%
+        height: 4rem
+        background: none
+
+        .eslatmaButton
+            padding: 1rem 2rem
+            border: none
+            border-radius: 1.3rem
+            background: #0051ff
+            color: #fff !important
+            pointer-events: none
+            user-select: none
+            transition: all 0.3s ease
+
+.eslatmaList
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr))
+    gap: 2rem
+    transition: all 0.3s ease
+    animation: elanimation 1s ease
+
+    .eslatma
+        display: flex
+        align-items: start
+        justify-content: space-between
+        padding: 1rem
+        overflow: scroll
+        height: 16rem
+        backdrop-filter: blur(10px)
+        border-radius: 2rem
+        width: 100%
+        animation: eanimate 0.8s ease
+
+        .mainEslatma
+            display: grid
+            align-items: center
+            justify-items: start
+            gap: 0.8rem
+
+    .eslatmaText
+        font-size: 2rem
+
+    .deleteeslatmaButton
+        border: none
+        background: none
+
+@keyframes eFanimate
+    0%
+        transform: rotate(180deg) scale(0.1) rotateX(180deg) skew(60deg)
+
+    50%
+        transform: scale(2) rotate(-10deg)
+
+@keyframes elanimation
+    0%
+        transform: scale(0.2) skew(180deg)
+        gap: 8rem
+
+    75%
+        transform: scale(2.5)
+
+@keyframes eanimate
+    0%
+        transform: scale(1)
+
+    40%
+        transform: scale(0)
+
+    70%
+        transform: scale(2)
+
