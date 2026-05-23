@@ -16,6 +16,9 @@
     background: #ffffff00
     padding: 1rem 2rem
     border: none
+    transition: all 0.3s ease
+    &:hover
+        transform: translateY(-0.6rem)
 
     .malumotDelBtn
         background: none
@@ -61,22 +64,3 @@
             transition: all 0.3s ease
             user-select: none
             pointer-events: none
-
-@keyframes sa
-    0%
-        transform: scale(0) translateY(40rem)
-
-@keyframes sc1
-    0%
-        transform: scale(1.5) skew(180deg)
-
-    50%
-        transform: translate(50rem, 0) scale(2) skew(340deg)
-
-@keyframes sc2
-    0%
-        transform: scale(1.5)
-
-    50%
-        transform: translate(-50rem, 0) scale(2) skew(20deg)
-

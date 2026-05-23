@@ -22,7 +22,7 @@ function Header({ setMode, cursorOO, cursorOK, activeTab, mode }) {
             <header className="header">
                 <h1 className='activeTab__name'>{activeTab}</h1>
                 <div onClick={setMode} className="mode__switch__container" ref={modeButtonRef} onMouseLeave={() => { setModeX(0), setModeY(0), cursorOK() }} onMouseMove={(e) => { cursorPosition(e) }} onMouseEnter={cursorOO} >
-                    <button className="mode__switch" style={{ transform: `translate(${modeX}px, ${modeY}px)`, color: `${mode === 'dark' ? '#ffd500' : '#0000b1'}`, background: `${mode === 'dark' ? '#33333354' : '#ffffff54'}` }}>{mode === 'dark' ? '☼' : '☾'}</button>
+                    <button className="mode__switch" style={{ color: `${mode === 'dark' ? '#ffd500' : '#0000b1'}`, background: `${mode === 'dark' ? '#33333354' : '#ffffff54'}` }}>{mode === 'dark' ? '☼' : '☾'}</button>
                 </div>
             </header>
         </>

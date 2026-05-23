@@ -104,25 +104,25 @@ function Dashboard({ mode, cursorOO, cursorOK, eslatmas, odatlar }) {
         <>
             <div className="dashboardCards">
                 <div className="dashboardCardContainer" ref={card1Ref} onMouseLeave={() => { setCard1X(0), setCard1Y(0) }} onMouseMove={(e) => { card1Position(e) }}>
-                    <div className="dashboardCard" style={{ transform: `translate(${card1X}px, ${card1Y}px)`, background: `${mode === 'dark' ? '#2c2c2c54' : '#ffffff54'}` }}>
+                    <div className="dashboardCard" style={{ background: `${mode === 'dark' ? '#1c1c1c' : '#ffffff54'}` }}>
                         <p className="dashboardItem">odatlar</p>
                         <div className="dashboardCardNum">{odatlar.length}</div>
                     </div>
                 </div>
                 <div className="dashboardCardContainer" ref={card2Ref} onMouseLeave={() => { setCard2X(0), setCard2Y(0) }} onMouseMove={(e) => { card2Position(e) }}>
-                    <div className="dashboardCard" style={{ transform: `translate(${card2X}px, ${card2Y}px)`, background: `${mode === 'dark' ? '#2c2c2c54' : '#ffffff54'}` }}>
+                    <div className="dashboardCard" style={{ background: `${mode === 'dark' ? '#1c1c1c' : '#ffffff54'}` }}>
                         <div className="dashboardItem">vazifalar</div>
                         <div className="dashboardCardNum">{todos.length}</div>
                     </div>
                 </div>
                 <div className="dashboardCardContainer" ref={card3Ref} onMouseLeave={() => { setCard3X(0), setCard3Y(0) }} onMouseMove={(e) => { card3Position(e) }}>
-                    <div className="dashboardCard" style={{ transform: `translate(${card3X}px, ${card3Y}px)`, background: `${mode === 'dark' ? '#2c2c2c54' : '#ffffff54'}` }}>
+                    <div className="dashboardCard" style={{ background: `${mode === 'dark' ? '#1c1c1c' : '#ffffff54'}` }}>
                         <div className="dashboardItem">eslatmalar</div>
                         <div className="dashboardCardNum">{eslatmas.length}</div>
                     </div>
                 </div>
             </div>
-            <div className="todoContainer" style={{ background: `${mode === 'dark' ? '#2c2c2c54' : '#ffffff54'}` }}>
+            <div className="todoContainer" style={{ background: `${mode === 'dark' ? '#1c1c1c' : '#ffffff54'}` }}>
                 <h2>Bugungi vazifalar</h2>
 
                 <form onSubmit={handleAddTodo} className="todoForm">
@@ -134,7 +134,7 @@ function Dashboard({ mode, cursorOO, cursorOK, eslatmas, odatlar }) {
                         onChange={(e) => setInputValue(e.target.value)}
                     />
                     <button type="submit" className="todoButtonContainer" ref={pBtn} onMouseLeave={() => { setPBtnX(0), setPBtnY(0), cursorOK() }} onMouseMove={(e) => { pBtnPosition(e) }} onMouseEnter={cursorOO}>
-                        <button className="todoButton" style={{ transform: `translate(${PBtnX}px, ${PBtnY}px)`, color: `${mode === 'dark' ? '#fff' : '#000'}` }}>+</button>
+                        <button className="todoButton" style={{ color: `${mode === 'dark' ? '#fff' : '#000'}` }}>+</button>
                     </button>
                 </form>
 
@@ -145,7 +145,7 @@ function Dashboard({ mode, cursorOO, cursorOK, eslatmas, odatlar }) {
 
                                 <div className='todoText'>{todo.text}</div>
 
-                                <input className="todoCheckbox"  id={todo.id}
+                                <input className="todoCheckbox" id={todo.id}
                                     type="checkbox"
                                     checked={todo.isCompleted}
                                     onChange={() => toggleTodo(todo.id)}
@@ -168,3 +168,5 @@ function Dashboard({ mode, cursorOO, cursorOK, eslatmas, odatlar }) {
 }
 
 export default Dashboard;
+
+// mode

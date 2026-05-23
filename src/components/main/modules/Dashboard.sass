@@ -7,6 +7,8 @@
         align-items: center
         justify-items: center
         padding: 1rem
+        &:hover
+            transform: translateY(-0.6rem)
 
         .dashboardCard
             width: 100%
@@ -32,24 +34,6 @@
             .dashboardCardNum
                 font-size: 2.5rem
                 font-weight: bold
-
-@keyframes dc
-    0%
-        transform: translate(0, -5rem) scale(0.5)
-    50%
-        transform: translate(0, 0) scale(1.2)
-    100%
-        transform: translate(0, 0) scale(1)
-
-@keyframes dt
-    0%
-        background-position: 0% 50%
-
-    50%
-        background-position: 100% 50%
-
-    100%
-        background-position: 0% 50%
 
 .todoContainer
     animation: todoC 1s ease
@@ -178,23 +162,3 @@
         transition: all 0.3s ease
         font-size: 2rem
         user-select: none
-
-@keyframes todoC
-    0%
-        transform: scale(0)
-
-    50%
-        transform: scale(1.2)
-
-@keyframes todo
-    0%
-        transform: skew(100deg)
-
-@keyframes todoI
-    0%
-        transform: scale(0)
-
-    50%
-        transform: scale(0.2)
-
-

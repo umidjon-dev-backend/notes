@@ -21,14 +21,14 @@ function Sozlamalar({ mode, setMode, cursorOO, cursorOK }) {
     return (
         <>
             <div className="settingsContainer">
-                <div className="settingContainer" style={{ background: `${mode === 'dark' ? '#22222254' : '#fff'}` }}>
+                <div className="settingContainer" style={{ background: `${mode === 'dark' ? '#1c1c1c' : '#fff'}` }}>
                     <h2 style={{ color: 'gray' }}>Qorong'u rejim</h2>
                     <button onClick={setMode} onMouseEnter={cursorOO} onMouseLeave={cursorOK} className="modeSwitcherBtnContainer" style={{ background: `${mode === 'dark' ? '#09ff006a' : '#eee'}`, justifyContent: `${mode === 'dark' ? 'end' : 'start'}` }}>
                         <button className="modeSwitcher"></button>
                     </button>
                 </div>
                 <button className="malumotDelBtnContainer" ref={lDelRef} onMouseEnter={cursorOO} onMouseMove={(e) => { lDelPosition(e)}} onMouseLeave={() => {cursorOK(), setlDelX(0), setlDelY(0)}} onClick={() => localStorage.clear()}>
-                    <div className="malumotDelBtn" style={{transform: `translate(${lDelX}px, ${lDelY}px)`}}>LocalStorageni tozalash</div>
+                    <div className="malumotDelBtn">LocalStorageni tozalash</div>
                 </button >
             </div >
         </>

@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Cursor from './components/cursor/Cursor.jsx';
 import Menu from './components/menu/Menu.jsx';
 import Main from './components/main/Main.jsx';
-import darkBg from './assets/habit-tracker-dark.png';
-import lightBg from './assets/habit-tracker-light.png';
 import './App.css';
 
 function App() {
@@ -50,11 +48,11 @@ function App() {
     return (
         <>
             <Cursor x={clientx} y={clienty} o={cursorO} mode={mode} />
-            <main className="main" style={{ gridTemplateColumns: `${openNav ? '1.4fr 8.6fr' : '0.5fr 9.5fr'}`, backgroundImage: `url(${mode === 'dark' ? darkBg : lightBg})`, color: `${mode === 'dark' ? '#fff' : '#000'}` }}>
-                <nav className="navbar" style={{ background: `${mode === 'dark' ? '#1b1b1b54' : '#ffffff54'}`, borderRight: `0.3rem solid #eeeeee10` }}>
+            <main className="main" style={{ gridTemplateColumns: `${openNav ? '1.4fr 8.6fr' : '0.5fr 9.5fr'}`, background: `${mode === 'light' ? '#eee' : '#111'}`, color: `${mode === 'dark' ? '#fff' : '#000'}` }}>
+                <nav className="navbar" style={{ background: `${mode === 'dark' ? '#111' : '#fff'}` }}>
                     <Menu mode={mode} setActiveTabSozlamalar={() => setActiveTab('sozlamalar')} setActiveTabEslatmalar={() => setActiveTab('eslatmalar')} setActiveTabOdatlar={() => setActiveTab('odatlar')} setActiveTabDashboard={() => setActiveTab('dashboard')} activeTab={activeTab} openMenu={() => setOpenNav(openNav ? false : true)} nav={openNav} cursorOO={() => { setCursorO(38) }} cursorOK={() => { setCursorO(22) }} />
                 </nav>
-                <section className="asosiySection" style={{ background: `${mode === 'dark' ? '#1b1b1b54' : '#eeeeee54'}` }}>
+                <section className="asosiySection" style={{ background: `${mode === 'dark' ? '#000' : '#eee'}` }}>
                     <Main mode={mode} setMode={() => { setMode(mode === 'dark' ? 'light' : 'dark') }} activeTab={activeTab} cursorOO={() => { setCursorO(38) }} cursorOK={() => { setCursorO(22) }} />
                 </section>
             </main>

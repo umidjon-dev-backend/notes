@@ -67,7 +67,7 @@ function Odatlar({ cursorOK, cursorOO, mode, odatlar, setodatlar }) {
 
     return (
         <>
-            <div className="odats-container" style={{ background: `${mode === 'dark' ? '#22222254' : '#ffffff54'}` }}>
+            <div className="odats-container" style={{ background: `${mode === 'dark' ? '#1c1c1c' : '#ffffff54'}` }}>
                 <form className="odat-form" onSubmit={handleddodat}>
                     <input
                         style={{ color: `${mode === 'dark' ? '#fff' : '#000'}` }}
@@ -78,7 +78,7 @@ function Odatlar({ cursorOK, cursorOO, mode, odatlar, setodatlar }) {
                         onChange={(e) => setodatlarInput(e.target.value)}
                     />
                     <button type="submit" ref={qoshishRef} className="odat-btnContainer" onMouseEnter={cursorOO} onMouseMove={(e) => { qoshishPosition(e) }} onMouseLeave={() => { cursorOK(), setqoshishX(0), setqoshishY(0) }}>
-                        <div style={{ transform: `translate(${qoshishX}px, ${qoshishY}px)` }} className='odatBtn'>Qo'shish</div>
+                        <div className='odatBtn'>Qo'shish</div>
                     </button>
                 </form>
                 <div className="mainOdatlarTable">
